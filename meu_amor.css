@@ -1,0 +1,164 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte fofa */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #d14787; /* Rosa cereja mais escuro */
+    background: url('hello-kitty.jpg') center/cover no-repeat fixed;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.parallax-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('hello-kitty.jpg') center/cover no-repeat;
+    z-index: -1;
+    animation: moveBackground 20s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* HEADER REMOVIDO */
+header {
+    padding: 0; 
+    background: none; /* Remove o fundo */
+    box-shadow: none; /* Remove sombras */
+}
+
+h1 {
+    font-size: 2rem; 
+    color: #fff;
+    margin-bottom: 5px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1rem; 
+    color: #ffa3c2; /* Rosa claro para contraste */
+    margin-bottom: 15px; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+/* Estilos do Álbum */
+.album {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.album:hover {
+    transform: scale(1.05);
+}
+
+.photo-frame img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* GALERIA */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery .photo {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery .photo:hover {
+    transform: scale(1.1);
+}
+
+.gallery .photo img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Página de Detalhes */
+.photo-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.photo-details img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.info {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ffa3c2; /* Rosa claro para leitura */
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Botão Voltar */
+.btn-voltar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #b03570; /* Rosa escuro */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background-color: #8a2757; /* Tom de rosa ainda mais escuro */
+}
+
+/* RODAPÉ REMOVIDO */
+footer {
+    padding: 0;
+    background: none; /* Remove o fundo */
+    box-shadow: none; /* Remove sombras */
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
